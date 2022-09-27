@@ -5,29 +5,24 @@ namespace App\Nova;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Trix;
-use Laravel\Nova\Fields\DateTime;
-use Laravel\Nova\Fields\Boolean;
-use Laravel\Nova\Fields\Select;
-use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Post extends Resource
+class Tag extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\Post::class;
+    public static $model = \App\Models\Tag::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'title';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.
@@ -35,7 +30,7 @@ class Post extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'title', 'body'
+        'id', 'name'
     ];
 
     /**
@@ -49,24 +44,9 @@ class Post extends Resource
         return [
             ID::make()->sortable(),
 
-            Text::make('Title'),
+            Text::make('Name'),
 
-            Trix::make('Body'),
-
-            DateTime::make('Publish Post At', 'publish_at')->hideFromIndex(),
-
-            DateTime::make('Publish Until')->hideFromIndex(),
-
-            Boolean::make('Is Published'),
-
-            Select::make('Category')->options([
-                'tutorials' => 'Tutorials',
-                'news' => 'News',
-            ])->hideWhenUpdating(),
-
-            BelongsTo::make('User'),
-
-            BelongsToMany::make('Tags'),
+            BelongsToMany::make('Posts'),
         ];
     }
 
