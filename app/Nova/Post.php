@@ -43,6 +43,16 @@ class Post extends Resource
         return $query->where('user_id', $request->user()->id);
     }
 
+    public function title()
+    {
+        return $this->title . ' - ' . $this->category;
+    }
+
+    public function subtitle()
+    {
+        return 'Author: ' . $this->user->name;
+    }
+
     /**
      * Get the fields displayed by the resource.
      *
