@@ -2,6 +2,9 @@
 
 namespace App\Nova;
 
+use App\Nova\Filters\PostCategories;
+use App\Nova\Filters\PostPublished;
+use App\Nova\Lenses\MostTags;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
@@ -81,7 +84,7 @@ class Post extends Resource
             ]),
 
             Boolean::make('Is Published')->canSee(function ($request) {
-                return false;
+                return true;
             }),
 
             Select::make('Category')->options([
@@ -118,7 +121,10 @@ class Post extends Resource
      */
     public function filters(NovaRequest $request)
     {
-        return [];
+        return [
+            new PostPublished,
+            new PostCategories,
+        ];
     }
 
     /**
@@ -129,7 +135,9 @@ class Post extends Resource
      */
     public function lenses(NovaRequest $request)
     {
-        return [];
+        return [
+            new MostTags
+        ];
     }
 
     /**
