@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c053c3424a57f1a769f73d0a8310a63e",
+    "content-hash": "a07f151995fec9a3c6aac430019b4247",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -61,6 +61,42 @@
                 "source": "https://github.com/asm89/stack-cors/tree/v2.1.1"
             },
             "time": "2022-01-18T09:12:03+00:00"
+        },
+        {
+            "name": "beyondcode/nova-clock",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./nova-components/NovaClock",
+                "reference": "c1583a33595a278d344fca6c3a7061125c48e3a3"
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Beyondcode\\NovaClock\\CardServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Beyondcode\\NovaClock\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova card.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "beyondcode/viewcache",

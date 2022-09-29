@@ -15,7 +15,8 @@
         "laravel/nova": "~4.0",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "beyondcode/viewcache": "*"
+        "beyondcode/viewcache": "*",
+        "beyondcode/nova-clock": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -74,6 +75,10 @@
         {
             "type": "path",
             "url": "./nova-components/Viewcache"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/NovaClock"
         }
     ],
     "minimum-stability": "dev",
