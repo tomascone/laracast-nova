@@ -16,7 +16,8 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "beyondcode/viewcache": "*",
-        "beyondcode/nova-clock": "*"
+        "beyondcode/nova-clock": "*",
+        "beyondcode/string-limit": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -79,6 +80,10 @@
         {
             "type": "path",
             "url": "./nova-components/NovaClock"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/StringLimit"
         }
     ],
     "minimum-stability": "dev",

@@ -10,6 +10,7 @@ use App\Nova\Metrics\PostCount;
 use App\Nova\Metrics\PostsPerCategory;
 use App\Nova\Metrics\PostsPerDay;
 use Beyondcode\NovaClock\NovaClock;
+use Beyondcode\StringLimit\StringLimit;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
@@ -72,9 +73,9 @@ class Post extends Resource
         return [
             ID::make()->sortable(),
 
-            Text::make('Title')->rules([
+            StringLimit::make('Title')->rules([
                 'required'
-            ]),
+            ])->max(10),
 
             Trix::make('Body')->rules([
                 'required'

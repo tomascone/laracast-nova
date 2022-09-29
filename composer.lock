@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a07f151995fec9a3c6aac430019b4247",
+    "content-hash": "1ecaf7b939fb8d019e1115fe4f99f8da",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -90,6 +90,42 @@
                 "MIT"
             ],
             "description": "A Laravel Nova card.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "beyondcode/string-limit",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./nova-components/StringLimit",
+                "reference": "ca0aa73877396b3cef0c4ca676806a09a5e87e76"
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Beyondcode\\StringLimit\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Beyondcode\\StringLimit\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova field.",
             "keywords": [
                 "laravel",
                 "nova"
