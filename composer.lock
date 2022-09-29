@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "85cd6957782e8be233097775f23ecd47",
+    "content-hash": "c053c3424a57f1a769f73d0a8310a63e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -61,6 +61,42 @@
                 "source": "https://github.com/asm89/stack-cors/tree/v2.1.1"
             },
             "time": "2022-01-18T09:12:03+00:00"
+        },
+        {
+            "name": "beyondcode/viewcache",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./nova-components/Viewcache",
+                "reference": "1db5cfbbccaef159677cbad0296bc3145777f4b5"
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Beyondcode\\Viewcache\\ToolServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Beyondcode\\Viewcache\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova tool.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "brick/math",
@@ -1600,17 +1636,17 @@
         },
         {
             "name": "laravel/nova",
-            "version": "4.15.1",
+            "version": "4.15.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:laravel/nova.git",
-                "reference": "2d5d95ee17334d33040ec75cc52bc54235e9875f"
+                "reference": "96d4481cfd5bd4406212487e17838fd6bc261f6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-2d5d95ee17334d33040ec75cc52bc54235e9875f-zip-d0fc38.zip",
-                "reference": "2d5d95ee17334d33040ec75cc52bc54235e9875f",
-                "shasum": "d192a02cbdf2f3448b06cd8a2ae8468e1e49e2c3"
+                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-96d4481cfd5bd4406212487e17838fd6bc261f6e-zip-acd1ac.zip",
+                "reference": "96d4481cfd5bd4406212487e17838fd6bc261f6e",
+                "shasum": "85692034c3dc489eaa92d2fd2f3b3f2406aac0f2"
             },
             "require": {
                 "brick/money": "^0.5.0|^0.6.0",
@@ -1704,9 +1740,9 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/laravel/nova/tree/v4.15.1"
+                "source": "https://github.com/laravel/nova/tree/v4.15.2"
             },
-            "time": "2022-09-21T16:08:58+00:00"
+            "time": "2022-09-27T19:52:24+00:00"
         },
         {
             "name": "laravel/sanctum",

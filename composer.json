@@ -2,7 +2,10 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
@@ -11,7 +14,8 @@
         "laravel/framework": "^8.75",
         "laravel/nova": "~4.0",
         "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "beyondcode/viewcache": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -62,6 +66,14 @@
         {
             "type": "composer",
             "url": "https://nova.laravel.com"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/Viewcache"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/Viewcache"
         }
     ],
     "minimum-stability": "dev",
